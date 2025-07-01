@@ -1,18 +1,20 @@
 const express = require('express');
-const routes = express.Router();
+const router = express.Router();
 
-router.get('/estudiantes', (req, res) =>{
+router.get('/', (req, res) =>{
     res.json({msg: 'Consulta estudiante'});
 });
 
-router.post('/estudiantes', (req, res) =>{
+router.post('/', (req, res) =>{
     res.json({msg: 'Ingreso de estudiantes'});
 });
 
-router.put('/estudiantes', (req, res) =>{
+router.put('/', (req, res) =>{
     res.json({msg: 'Actualización de estudiantes'});
 });
 
-router.delete('/estudiantes', (req, res) =>{
+router.delete('/', (req, res) =>{
     res.json({msg: 'Borrado de estudiantes'});
 });
+
+module.exports = router;
